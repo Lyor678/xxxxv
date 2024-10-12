@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stockage des Identifiants</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #fafafa;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .container {
+            background-color: #fff;
+            padding: 20px;
+            border: 1px solid #dbdbdb;
+            border-radius: 8px;
+            width: 400px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>Identifiants Enregistrés</h1>
+    <div id="output"></div>
+</div>
+
+<script>
+    // Récupérer les paramètres de l'URL
+    const urlParams = new URLSearchParams(window.location.search);
+    const email = urlParams.get('email');
+    const password = urlParams.get('password');
+
+    // Afficher les identifiants
+    const output = document.getElementById('output');
+    output.innerHTML = `<p>Email: ${email}</p><p>Mot de passe: ${password}</p>`;
+</script>
+
+</body>
+</html>
